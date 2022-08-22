@@ -1,0 +1,40 @@
+.results-buttons {
+  background-color: #fff;
+  border: 1px solid #dfe5ec;
+  border-radius: 5px;
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .results-buttons-item {
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    padding: 15px 30px;
+    font-size: 12px;
+    line-height: 20px;
+    transition: 0.5s;
+    letter-spacing: 0.5px;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    &:first-child {
+      border-right: 1px solid #dfe5ec;
+      border-radius: 5px 0 0 5px;
+      @media (max-width: 767px) {
+        border-right: none;
+        border-bottom: 1px solid #dfe5ec;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    &:last-child {
+      border-left: 1px solid #dfe5ec;
+      border-radius: 0 5px 5px 0;
+      @media (max-width: 767px) {
+        border-left: none;
+        border-top: 1px solid #dfe5ec;
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+}

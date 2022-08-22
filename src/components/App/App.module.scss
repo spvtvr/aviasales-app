@@ -1,28 +1,32 @@
 @font-face {
   font-family: 'Open Sans Regular';
-  src: url('../../fonts/OpenSans-Regular.ttf');
+  src: url('../../assets/fonts/OpenSans-Regular.ttf');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Open Sans SemiBold';
-  src: url('../../fonts/OpenSans-SemiBold.ttf');
+  src: url('../../assets/fonts/OpenSans-SemiBold.ttf');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Open Sans Bold';
-  src: url('../../fonts/OpenSans-Bold.ttf');
+  src: url('../../assets/fonts/OpenSans-Bold.ttf');
   font-weight: 700;
 }
 
-$main-blue: #2196F3;
-$bg-color: #F3F7FA;
-$text-black: #4A4A4A;
-$text-gray: #A0B0B9;
-$checkbox-border: #9ABBCE;
+$main-blue: #2196f3;
+$bg-color: #f3f7fa;
+$text-black: #4a4a4a;
+$text-gray: #a0b0b9;
+$checkbox-border: #9abbce;
 
-*, html, body, ul, ol {
+*,
+html,
+body,
+ul,
+ol {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -32,7 +36,10 @@ $checkbox-border: #9ABBCE;
   text-transform: uppercase;
   line-height: 20px;
   font-size: 13px;
-  *::after, *::before { box-sizing: inherit; }
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
 }
 
 body {
@@ -62,205 +69,12 @@ body {
     flex-direction: column;
     width: 100%;
   }
-  .app-aside {
-    display: flex;
-    background-color: #fff;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column;
-    border-radius: 5px;
-    width: 232px;
-    max-height: 260px;
-    @media (max-width: 767px) {
-      margin: 0 auto;
-      width: 80%;
-    }
-    span {
-      margin: 20px;
-      margin-bottom: 10px;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-    }
-    label {
-      text-transform: none;
-      padding: 10px 20px 10px 50px;
-      transition: 0.5s;
-      &:last-child {
-        margin-bottom: 10px;
-      }
-      &:hover {
-        background-color: #F1FCFF;
-        cursor: pointer;
-      }
-      .checkbox {
-        position: absolute;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        &:checked + span {
-          background: url('../../img/check-shape.svg') no-repeat 40%;
-          border-color: $main-blue;
-        }
-      }
-      .custom-checkbox {
-        position: absolute;
-        margin: 0;
-        width: 20px;
-        height: 20px;
-        border: 1px solid $checkbox-border;
-        border-radius: 2px;
-        margin-left: -30px;
-      }
-    }
-  }
   .app-results {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     @media (max-width: 767px) {
       margin: 20px 0;
-    }
-    .results-buttons {
-      background-color: #fff;
-      border: 1px solid #DFE5EC;
-      border-radius: 5px;
-      @media (max-width: 767px) {
-        margin: 0 auto;
-        width: 80%;
-      }
-      .results-buttons-item {
-        cursor: pointer;
-        border: none;
-        background-color: #fff;
-        padding: 15px 30px;
-        font-size: 12px;
-        line-height: 20px;
-        transition: 0.5s;
-        letter-spacing: 0.5px;
-        @media (max-width: 767px) {
-          width: 100%;
-        }
-        &:first-child {
-          border-right: 1px solid #DFE5EC;
-          border-radius: 5px 0 0 5px;
-          @media (max-width: 767px) {
-            border-right: none;
-            border-bottom: 1px solid #DFE5EC;
-            border-radius: 5px 5px 0 0;
-          }
-        }
-        &:last-child {
-          border-left: 1px solid #DFE5EC;
-          border-radius: 0 5px 5px 0;
-          @media (max-width: 767px) {
-            border-left: none;
-            border-top: 1px solid #DFE5EC;
-            border-radius: 0 0 5px 5px;
-          }
-        }
-      }
-    }
-    .results-cards {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      @media (max-width: 767px) {
-        width: 80%;
-        margin: 20px auto 0 auto;
-      }
-      .card {
-        max-width: 520px;
-        background-color: #fff;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        padding: 17px;
-        .card-price-logo {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          .card-price {
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 24px;
-            color: $main-blue;
-          }
-        }
-        .card-info {
-          @media (max-width: 767px) {
-            display: flex;
-            justify-content: space-between;
-          }
-          .info-departure,
-          .info-arrival {
-            display: flex;
-            margin-top: 20px;
-            @media (max-width: 767px) {
-              flex-direction: column;
-            }
-            .info-departure-item:not(:last-child),
-            .info-arrival-item:not(:last-child) {
-              margin-right: 20px;
-            }
-            .info-departure-item,
-            .info-arrival-item {
-              span {
-                display: block;
-                min-width: 140px;
-                @media (max-width: 767px) {
-                  min-width: 10px;
-                  margin-bottom: 5px;
-                }
-                &:first-child {
-                  line-height: 18px;
-                  letter-spacing: 0.5px;
-                  color: #A0B0B9;
-                }
-                &:last-child {
-                  text-transform: none;
-                }
-              }
-            }
-            .info-arrival-item:last-child,
-            .info-departure-item:last-child {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            }
-          }
-        }
-      }
-    }
-    .not-find {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #cef;
-      margin-top: 20px;
-      padding: 20px;
-      text-transform: none;
-      font-weight: bold;
-      border-radius: 5px;
-      border: 1px solid #DFE5EC;
-    }
-    .more-tickets {
-      cursor: pointer;
-      border-radius: 5px;
-      padding: 15px;
-      margin-top: 20px;
-      font-weight: 600;
-      font-size: 12px;
-      line-height: 20px;
-      letter-spacing: 0.5px;
-      background-color: $main-blue;
-      border: none;
-      color: #fff;
-      transition: 0.5s;
-      &:hover {
-        background-color: #118bee;
-      }
-      @media (max-width: 767px) {
-        width: 80%;
-        margin: 20px auto;
-      }
     }
   }
 }

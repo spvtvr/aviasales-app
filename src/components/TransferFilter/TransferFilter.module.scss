@@ -1,0 +1,53 @@
+$main-blue: #2196f3;
+$checkbox-border: #9abbce;
+
+.app-aside {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  border-radius: 5px;
+  width: 232px;
+  max-height: 260px;
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    width: 80%;
+  }
+  span {
+    margin: 20px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  label {
+    text-transform: none;
+    padding: 10px 20px 10px 50px;
+    transition: 0.5s;
+    &:last-child {
+      margin-bottom: 10px;
+    }
+    &:hover {
+      background-color: #f1fcff;
+      cursor: pointer;
+    }
+    .checkbox {
+      position: absolute;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      &:checked + span {
+        background: url('../../assets/img/check-shape.svg') no-repeat 40%;
+        border-color: $main-blue;
+      }
+    }
+    .custom-checkbox {
+      position: absolute;
+      margin: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $checkbox-border;
+      border-radius: 2px;
+      margin-left: -30px;
+    }
+  }
+}
